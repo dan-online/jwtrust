@@ -5,6 +5,7 @@ on:
     tags:
       - "*"
 
+jobs:
   npm:
     name: npm
     runs-on: ubuntu-latest
