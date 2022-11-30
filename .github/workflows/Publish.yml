@@ -5,10 +5,10 @@ on:
     tags:
       - "*"
 
-  nodejs-npm:
-    name: nodejs-npm
+  npm:
+    name: npm
     runs-on: ubuntu-latest
-    needs: [nodejs-github-native]
+    needs: [native]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -34,7 +34,7 @@ on:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  nodejs-github-native:
+  native:
     name: nodejs-${{ matrix.node_version }}-${{ matrix.system.target }}-${{ matrix.system.os }}
     runs-on: ${{ matrix.system.os }}
     strategy:
