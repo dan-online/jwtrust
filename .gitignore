@@ -1,0 +1,11 @@
+target
+index.node
+**/node_modules
+**/.DS_Store
+npm-debug.log*
+
+# Yarn files
+.yarn/install-state.gz
+.yarn/build-state.yml
+
+dist/
