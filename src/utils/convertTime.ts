@@ -28,5 +28,5 @@ export const convertTime = (time: string) => {
       throw new Error('Invalid time unit');
   }
 
-  return now.getTime();
+  return Math.floor(now.getTime() / 1000);
 };

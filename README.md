@@ -128,10 +128,10 @@ The payload to sign. This is JSON serialized before signing.
 
 `options`
 
-| Option | Default value | Description                  |
-| ------ | ------------- | ---------------------------- |
-| exp    | 7 days        | Expiry date in UTC timestamp |
-| iat    | Date.now()    | Issued at                    |
+| Option | Default value       | Description                                                              |
+| ------ | ------------------- | ------------------------------------------------------------------------ |
+| exp    | 7 days              | Expiry date in UTC timestamp for example: Date.now() / 1000 + (60 \* 60) |
+| iat    | (Date.now() / 1000) | Issued at time in UTC format                                             |
 
 To aid expiry date, a helper is exported named `convertTime`:
 

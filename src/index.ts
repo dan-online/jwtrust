@@ -56,7 +56,7 @@ class JWTR<T = unknown> {
    */
   public sign(
     payload: T,
-    { exp = convertTime('7d'), iat = Date.now() }: JWTOptions = {
+    { exp = convertTime('7d'), iat = Date.now() / 1000 }: JWTOptions = {
       exp: convertTime('7d'),
       iat: Date.now()
     }
@@ -85,7 +85,7 @@ class JWTR<T = unknown> {
     try {
       const output = bindings.verify(this.secret, token);
 
-      if (output.exp && output.exp < Date.now()) throw new Error('token expired');
+      if (output.exp && output.exp < Date.now() / 1000) throw new Error('token expired');
 
       return JSON.parse(output.payload) as T;
     } catch (err) {
