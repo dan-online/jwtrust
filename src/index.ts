@@ -1,4 +1,4 @@
-import bindings from "../index.node";
+import bindings from "../native/jwtrust.node";
 import { convertTime } from "./utils/convertTime";
 
 export interface JWTOptions {

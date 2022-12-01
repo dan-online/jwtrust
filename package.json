@@ -7,7 +7,7 @@
     "build:ts": "tsup",
     "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
     "build:debug": "npm run build --",
-    "build:release": "npm run build -- --release && yarn build:ts",
+    "build:release": "npm run build -- --release",
     "install": "npm run build:release",
     "release-native": "npm run build:release && rm -rf native && mkdir native && mv ./index.node ./native/jwtrust.node"
   },
