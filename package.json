@@ -5,12 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "build:ts": "tsup",
-    "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
-    "build:debug": "npm run build --",
-    "build:release": "npm run build -- --release",
-    "install": "npm run build:release",
+    "build": "yarn build:rust && yarn build:ts",
+    "build:rust": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
+    "build:debug": "yarn build:rust",
+    "build:release": "yarn build:rust --release",
     "benchmark": "BENCHMARK=true yarn build:ts && node dist/benchmark.js",
-    "release-native": "npm run build:release && rm -rf native && mkdir native && mv ./index.node ./native/jwtrust.node",
+    "release-native": "yarn build:release && rm -rf native && mkdir native && mv ./index.node ./native/jwtrust.node",
     "lint": "eslint src/**/*.ts",
     "prettier": "prettier -c src/**/*.ts"
   },
