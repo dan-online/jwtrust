@@ -23,6 +23,19 @@
     "remote_path": "v{version}"
   },
   "author": "DanCodes <dan@dancodes.online>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dan-online/jwtrust.git"
+  },
+  "keywords": [
+    "jwt",
+    "jsonwebtoken",
+    "rust",
+    "speed",
+    "performance",
+    "sign",
+    "verify"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@favware/colorette-spinner": "^1.0.1",
@@ -38,8 +51,8 @@
     "tsup": "^6.5.0",
     "typescript": "^4.9.3"
   },
-  "packageManager": "yarn@3.3.0",
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.10"
-  }
+  },
+  "packageManager": "yarn@3.3.0"
 }
