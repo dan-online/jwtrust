@@ -21,15 +21,21 @@ JWTRust Benchmark commencing, runs set at 100000 and 16 payload length.
 
 ## Table of contents
 
-- [JWTRust](#JWTRust)
+- [JWTRust](#jwtrust)
   - [Table of contents](#table-of-contents)
   - [Getting Started](#getting-started)
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [Documentation](#api)
+  - [API](#api)
     - [construct](#construct)
     - [sign](#sign)
+      - [Parameters](#parameters)
     - [verify](#verify)
+      - [Parameters](#parameters-1)
+  - [Typescript](#typescript)
+  - [Development](#development)
+    - [Prerequisites](#prerequisites)
+    - [Building the entire package](#building-the-entire-package)
+    - [Running benchmarks](#running-benchmarks)
   - [Contributing](#contributing)
   - [Built With](#built-with)
   - [Versioning](#versioning)
@@ -50,39 +56,6 @@ Or if you still for some reason prefer npm:
 
 ```sh
 $ npm i jwtrust
-```
-
-## Development
-
-### Prerequisites
-
-This project requires NodeJS (version 16 or later) and yarn.
-[Node](http://nodejs.dan-online/) and [NPM](https://yarnpkg.com/) are really easy to install.
-To make sure you have them available on your machine,
-try running the following command.
-
-```sh
-$ yarn -v && node -v && rustc --version
-3.3.0
-v16.18.0
-rustc 1.65.0
-```
-
-### Building the entire package
-
-_Requirement: Rust is installed on your machine._
-
-```sh
-$ yarn build
-```
-
-This task will create a distribution version of the project
-inside your local `dist/` folder and output a binary in `native/`
-
-### Running benchmarks
-
-```sh
-$ yarn benchmark
 ```
 
 ## API
@@ -170,6 +143,39 @@ const jwtrust = new JWTR<{ hello: string }>('secret');
 const token = jwtrust.sign({ hello: 'world' });
 
 const decoded = jwtrust.verify(token);
+```
+
+## Development
+
+### Prerequisites
+
+This project requires NodeJS (version 16 or later) and yarn.
+[Node](http://nodejs.dan-online/) and [NPM](https://yarnpkg.com/) are really easy to install.
+To make sure you have them available on your machine,
+try running the following command.
+
+```sh
+$ yarn -v && node -v && rustc --version
+3.3.0
+v16.18.0
+rustc 1.65.0
+```
+
+### Building the entire package
+
+_Requirement: Rust is installed on your machine._
+
+```sh
+$ yarn build
+```
+
+This task will create a distribution version of the project
+inside your local `dist/` folder and output a binary in `native/`
+
+### Running benchmarks
+
+```sh
+$ yarn benchmark
 ```
 
 ## Contributing
