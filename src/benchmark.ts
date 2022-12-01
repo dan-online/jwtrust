@@ -2,7 +2,7 @@ import { JWTR } from '.';
 import { randomKey } from './utils/randomKey';
 import { Spinner } from '@favware/colorette-spinner';
 
-const runs = 1000000;
+const runs = 100000;
 const payloadLength = 128;
 
 console.log(`\nJWTRust Benchmark commencing, runs set at ${runs} and ${payloadLength} payload length.\n`);

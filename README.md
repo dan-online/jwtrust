@@ -4,6 +4,10 @@
 
 > A tiny library to sign and verify JWT tokens using Rust for pure performance.
 
+<img src=".github/banner.png" height="200">
+
+> Benchmark run on Ryzen 3600X (6 cores, 12 threads) with 32GB RAM
+
 ## Prerequisites
 
 This project requires NodeJS (version 16 or later) and yarn.
