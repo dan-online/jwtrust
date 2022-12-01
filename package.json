@@ -1,6 +1,6 @@
 {
   "name": "jwtrust",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,10 @@
     "build:debug": "npm run build --",
     "build:release": "npm run build -- --release",
     "install": "npm run build:release",
-    "release-native": "npm run build:release && rm -rf native && mkdir native && mv ./index.node ./native/jwtrust.node"
+    "benchmark": "BENCHMARK=true yarn build:ts && node dist/benchmark.js",
+    "release-native": "npm run build:release && rm -rf native && mkdir native && mv ./index.node ./native/jwtrust.node",
+    "lint": "eslint src/**/*.ts",
+    "prettier": "prettier -c src/**/*.ts"
   },
   "binary": {
     "module_name": "jwtrust",
@@ -21,9 +24,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@favware/colorette-spinner": "^1.0.1",
     "@mapbox/node-pre-gyp": "^1.0.10",
+    "@sapphire/eslint-config": "^4.3.8",
     "@sapphire/ts-config": "^3.3.4",
+    "@types/node": "^18.11.10",
     "cargo-cp-artifact": "^0.1",
+    "eslint": "^8.28.0",
+    "prettier": "^2.8.0",
     "tsup": "^6.5.0",
     "typescript": "^4.9.3"
   },
