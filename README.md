@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/jwtrust.svg)](https://badge.fury.io/js/jwtrust)
+![npm version](https://img.shields.io/npm/v/jwtrust)
 
 # JWTRust
 
