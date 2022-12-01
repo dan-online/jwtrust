@@ -74,7 +74,7 @@ jobs:
 
       - name: Build native
         run: yarn release-native
-      - name: Pacakge the asset
+      - name: Package the asset
         run: npx node-pre-gyp package
       - name: Upload to Github releases
         shell: bash

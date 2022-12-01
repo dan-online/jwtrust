@@ -9,7 +9,7 @@
     "build:debug": "npm run build --",
     "build:release": "npm run build -- --release && yarn build:ts",
     "install": "npm run build:release",
-    "release-native": "npm run build:release && rm -rf native && mkdir native && mv ./index.node ./native/index.node"
+    "release-native": "npm run build:release && rm -rf native && mkdir native && mv ./index.node ./native/jwtrust.node"
   },
   "binary": {
     "module_name": "jwtrust",
