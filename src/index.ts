@@ -71,11 +71,21 @@ class JWTR<T = unknown> {
     }
   }
 
+  /**
+   * Verify and decode token with the secret key to a payload
+   * @param {string} token - The token to verify and decode.
+   * @returns {T} The encoded payload.
+   * @example
+   * ```js
+   * const token = jwtrust.sign({ hello: "world" }); // eyJ0eXAiOiJKV1QiLCJhb...
+   * const payload = jwtrust.verify(token); // { hello: "world" }
+   * ```
+   */
   public verify(token: string): T {
     try {
       const output = bindings.verify(this.secret, token);
 
-      if (output.exp && output.exp < Date.now()) throw new Error('Token expired');
+      if (output.exp && output.exp < Date.now()) throw new Error('token expired');
 
       return JSON.parse(output.payload) as T;
     } catch (err) {
