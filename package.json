@@ -1,7 +1,7 @@
 {
   "name": "jwtrust",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A tiny library to sign and verify JWT tokens using **Rust** bindings for pure performance.",
   "main": "dist/index.js",
   "scripts": {
     "build:ts": "tsup",
@@ -22,8 +22,8 @@
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}-{libc}.tar.gz",
     "remote_path": "v{version}"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "DanCodes <dan@dancodes.online>",
+  "license": "MIT",
   "devDependencies": {
     "@favware/colorette-spinner": "^1.0.1",
     "@sapphire/eslint-config": "^4.3.8",
