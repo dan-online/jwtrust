@@ -5,10 +5,11 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Claims {
-    // aud: String, // Optional. Audience
     exp: f64,
     iat: f64,
     payload: String,
+    // tbh these aren't really used, hOwever, I'll leave them here if someone wants to open an issue/pr
+    // aud: String, // Optional. Audience
     // iss: String, // Optional. Issuer
     // nbf: usize,  // Optional. Not Before (as UTC timestamp)
     // sub: String, // Optional. Subject (whom token refers to)
@@ -36,13 +37,13 @@ fn sign(mut cx: FunctionContext) -> JsResult<JsString> {
         .argument::<JsString>(0)?
         .downcast::<JsString, FunctionContext>(&mut cx)
         .unwrap()
-        .value(&mut cx) as String;
+        .value(&mut cx);
 
     let payload: String = cx
         .argument::<JsString>(1)?
         .downcast::<JsString, FunctionContext>(&mut cx)
         .unwrap()
-        .value(&mut cx) as String;
+        .value(&mut cx);
 
     let claims_input: Handle<JsObject> = cx.argument(2)?;
     let exp: f64 = claims_input
@@ -79,13 +80,13 @@ fn verify(mut cx: FunctionContext) -> JsResult<JsObject> {
         .argument::<JsString>(0)?
         .downcast::<JsString, FunctionContext>(&mut cx)
         .unwrap()
-        .value(&mut cx) as String;
+        .value(&mut cx);
 
     let token: String = cx
         .argument::<JsString>(1)?
         .downcast::<JsString, FunctionContext>(&mut cx)
         .unwrap()
-        .value(&mut cx) as String;
+        .value(&mut cx);
 
     let decoded = decode::<Claims>(
         &token,
