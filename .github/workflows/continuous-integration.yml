@@ -65,10 +65,10 @@ jobs:
           toolchain: stable
           target: ${{ matrix.system.target }}
           override: true
-      - name: Compile Packages
-        run: yarn workspace deno_jwtrust build
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
+      - name: Compile Packages
+        run: yarn workspace deno_jwtrust build
       - name: Run tests
         run: yarn workspace deno_jwtrust test
