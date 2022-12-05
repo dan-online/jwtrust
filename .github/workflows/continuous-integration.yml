@@ -46,3 +46,15 @@ jobs:
         run: yarn --immutable
       - name: Compile Packages
         run: yarn build
+
+  tests:
+    name: Test Deno
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - name: Run tests
+        run: yarn workspace deno_jwtrust test

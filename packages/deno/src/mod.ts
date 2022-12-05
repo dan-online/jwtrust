@@ -94,7 +94,6 @@ class JWTR<T = unknown> {
       const output = bindings.verify(this.secret, token);
       const exp = output.get_exp();
       const payload = output.get_payload();
-
       if (exp && exp < Date.now() / 1000) throw new Error('token expired');
 
       return JSON.parse(payload) as T;

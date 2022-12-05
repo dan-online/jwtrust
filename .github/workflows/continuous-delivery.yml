@@ -6,10 +6,13 @@ on:
       - '*'
 
 jobs:
-  npm:
-    name: npm
+  node:
+    name: node
     runs-on: ubuntu-latest
-    needs: [native]
+    needs: [deno_native, node_native]
+    defaults:
+      run:
+        working-directory: packages/node
     steps:
       - uses: actions/checkout@v2
         with:
@@ -30,14 +33,35 @@ jobs:
 
         run: python3 -c "import os; import json; p = json.load(open('package.json')); p['scripts']['install'] = 'node-pre-gyp install'; p['version'] = os.environ['RELEASE_VERSION']; json.dump(p, open('package.json', 'w'), indent=2, ensure_ascii=False);"
       - name: Publish to npm
-
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  native:
+  deno_native:
+    name: deno-build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/deno
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - name: Upload to Github releases
+        shell: bash
+        run: gh release upload ${{ env.RELEASE_VERSION }} "$(find ../../native -name *.wasm)" --clobber
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  node_native:
     name: nodejs-${{ matrix.node_version }}-${{ matrix.system.target }}-${{ matrix.system.os }}
     runs-on: ${{ matrix.system.os }}
+    defaults:
+      run:
+        working-directory: packages/node
     strategy:
       fail-fast: false
       matrix:

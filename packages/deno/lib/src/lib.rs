@@ -63,8 +63,14 @@ pub fn sign(secret: String, payload: String, input_claims: Claims) -> String {
 pub fn verify(secret: String, token_str: String) -> Decoded {
   let key: Hmac<Sha256> = Hmac::new_from_slice(secret.as_bytes()).unwrap();
 
-  let token: Token<Header, BTreeMap<String, String>, _> =
-    VerifyWithKey::verify_with_key(token_str.as_ref(), &key).unwrap();
+  let token_result = VerifyWithKey::verify_with_key(token_str.as_ref(), &key);
+
+  let token: Token<Header, BTreeMap<String, String>, _> = match token_result {
+    Ok(token) => token,
+    Err(err) => {
+      throw_str(err.to_string().as_str());
+    }
+  };
   // let header = token.header();
   let decoded_claims = token.claims();
 
