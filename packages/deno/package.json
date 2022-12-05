@@ -2,7 +2,8 @@
   "name": "deno_jwtrust",
   "scripts": {
     "build": "deno task wasmbuild -p deno_jwtrust --out native/",
-    "test": "JWT_TEST=1 deno test --allow-env --allow-read tests/*"
+    "test": "JWT_TEST=1 deno test --allow-env --allow-read tests/*",
+    "lint": "deno lint"
   },
   "devDependencies": {
     "@sapphire/ts-config": "^3.3.4"

@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn workspaces foreach run build"
+    "build": "yarn workspaces foreach run build",
+    "lint": "yarn workspaces foreach run lint"
   }
 }
