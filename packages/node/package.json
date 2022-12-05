@@ -13,7 +13,7 @@
     "benchmark": "yarn build:release && BENCHMARK=true yarn build:ts && node dist/benchmark.js",
     "release-native": "yarn build:release",
     "move-native": "rm -rf native && mkdir native && mv ./index.node ./native/jwtrust.node",
-    "lint": "eslint src/**/*.ts",
+    "lint": "eslint src/**/*.ts --fix=false",
     "prettier": "prettier -c src/**/*.ts"
   },
   "binary": {
