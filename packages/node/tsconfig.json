@@ -6,5 +6,5 @@
     "types": ["@types/node"],
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "exclude": ["src/types", "node_modules", "dist"]
+  "exclude": ["./src/types", "node_modules", "dist"]
 }

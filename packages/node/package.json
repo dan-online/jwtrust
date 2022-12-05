@@ -1,0 +1,59 @@
+{
+  "name": "jwtrust",
+  "version": "1.0.1",
+  "description": "A tiny library to sign and verify JWT tokens using **Rust** bindings for pure performance.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:ts": "tsup",
+    "build": "yarn build:rust && yarn build:ts",
+    "build:rust": "cargo-cp-artifact -nc ./index.node -- cargo build -p jwtrust --message-format=json-render-diagnostics",
+    "build:deno": "deno task wasmbuild --out deno_lib -p deno_jwtrust",
+    "build:debug": "yarn build:rust && yarn move-native",
+    "build:release": "yarn build:rust --release && yarn move-native",
+    "benchmark": "yarn build:release && BENCHMARK=true yarn build:ts && node dist/benchmark.js",
+    "release-native": "yarn build:release",
+    "move-native": "rm -rf native && mkdir native && mv ./index.node ./native/jwtrust.node",
+    "lint": "eslint src/**/*.ts",
+    "prettier": "prettier -c src/**/*.ts"
+  },
+  "binary": {
+    "module_name": "jwtrust",
+    "module_path": "./native",
+    "host": "https://github.com/dan-online/jwtrust/releases/download/",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}-{libc}.tar.gz",
+    "remote_path": "v{version}"
+  },
+  "author": "DanCodes <dan@dancodes.online>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dan-online/jwtrust.git"
+  },
+  "keywords": [
+    "jwt",
+    "jsonwebtoken",
+    "rust",
+    "speed",
+    "performance",
+    "sign",
+    "verify"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@favware/colorette-spinner": "^1.0.1",
+    "@sapphire/eslint-config": "^4.3.8",
+    "@sapphire/ts-config": "^3.3.4",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/node": "^18.11.10",
+    "cargo-cp-artifact": "^0.1",
+    "eslint": "^8.28.0",
+    "fast-jwt": "^2.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "prettier": "^2.8.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.10"
+  },
+  "packageManager": "yarn@3.3.0"
+}

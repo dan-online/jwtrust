@@ -727,6 +727,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deno_jwtrust@workspace:packages/deno":
+  version: 0.0.0-use.local
+  resolution: "deno_jwtrust@workspace:packages/deno"
+  dependencies:
+    "@sapphire/ts-config": ^3.3.4
+  languageName: unknown
+  linkType: soft
+
 "depd@npm:^1.1.2":
   version: 1.1.2
   resolution: "depd@npm:1.1.2"
@@ -1760,9 +1768,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jwtrust@workspace:.":
+"jwtrust@workspace:packages/node":
   version: 0.0.0-use.local
-  resolution: "jwtrust@workspace:."
+  resolution: "jwtrust@workspace:packages/node"
   dependencies:
     "@favware/colorette-spinner": ^1.0.1
     "@mapbox/node-pre-gyp": ^1.0.10
@@ -2495,6 +2503,12 @@ __metadata:
   checksum: 57aa8e17c7a8d5b80b7a26c8acd52779369826049dbc370b929d73a6015fb69161f5aca699e8c54f7ea410d4ce5b5a45b26b07d5c99724becd555eef0ffe35be
   languageName: node
   linkType: hard
+
+"root@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "root@workspace:."
+  languageName: unknown
+  linkType: soft
 
 "run-parallel@npm:^1.1.9":
   version: 1.2.0
