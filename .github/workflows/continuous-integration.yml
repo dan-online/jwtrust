@@ -21,6 +21,9 @@ jobs:
           node-version: 16
           cache: yarn
           registry-url: https://registry.yarnpkg.com/
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
       - name: Install Dependencies
         run: yarn --immutable
       - name: Run ESLint
@@ -42,6 +45,9 @@ jobs:
           node-version: 16
           cache: yarn
           registry-url: https://registry.yarnpkg.com/
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
       - name: Install Dependencies
         run: yarn --immutable
       - name: Compile Packages
