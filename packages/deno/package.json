@@ -2,6 +2,8 @@
   "name": "deno_jwtrust",
   "scripts": {
     "build": "deno task wasmbuild -p deno_jwtrust --out native/",
+    "build:debug": "yarn build --debug --skip-opt",
+    "benchmark": "yarn build && JWT_TEST=1 deno run -A src/benchmark.ts",
     "test": "JWT_TEST=1 deno test --allow-env --allow-read tests/*",
     "lint": "deno lint"
   },

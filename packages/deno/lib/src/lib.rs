@@ -11,23 +11,31 @@ pub struct Claims {
 }
 
 #[wasm_bindgen]
-pub struct Decoded {
+pub struct VerifyResult {
   claims: Claims,
   payload: String,
 }
 
 #[wasm_bindgen]
-impl Claims {
-  #[wasm_bindgen(constructor)]
-  pub fn new(exp: f64, iat: f64) -> Claims {
-    Claims { exp, iat }
+pub struct SignResult {
+  token: String,
+}
+
+#[wasm_bindgen]
+impl SignResult {
+  pub fn get_token(&self) -> String {
+    return self.token.to_string();
   }
 }
 
 #[wasm_bindgen]
-impl Decoded {
+impl VerifyResult {
   pub fn get_exp(&self) -> f64 {
     return self.claims.exp;
+  }
+
+  pub fn get_iat(&self) -> f64 {
+    return self.claims.iat;
   }
 
   pub fn get_payload(&self) -> String {
@@ -36,21 +44,22 @@ impl Decoded {
 }
 
 #[wasm_bindgen]
-pub fn sign(secret: String, payload: String, input_claims: Claims) -> String {
+pub fn sign(secret: String, payload: String, exp: f64, iat: f64) -> String {
   let key: Hmac<Sha256> = Hmac::new_from_slice(secret.as_bytes()).unwrap();
+  let mut claims = BTreeMap::new();
   let header = Header {
     algorithm: AlgorithmType::Hs256,
     ..Default::default()
   };
-  let mut claims = BTreeMap::new();
-  claims.insert("exp", input_claims.exp.to_string());
-  claims.insert("iat", input_claims.iat.to_string());
+
+  claims.insert("exp", exp.to_string());
+  claims.insert("iat", iat.to_string());
   claims.insert("payload", payload);
 
   let token_result = Token::new(header, claims).sign_with_key(&key);
 
   let token = match token_result {
-    Ok(token) => token.as_str().to_string(),
+    Ok(token) => token.into(),
     Err(err) => {
       throw_str(err.to_string().as_str());
     }
@@ -60,7 +69,7 @@ pub fn sign(secret: String, payload: String, input_claims: Claims) -> String {
 }
 
 #[wasm_bindgen]
-pub fn verify(secret: String, token_str: String) -> Decoded {
+pub fn verify(secret: String, token_str: String) -> VerifyResult {
   let key: Hmac<Sha256> = Hmac::new_from_slice(secret.as_bytes()).unwrap();
 
   let token_result = VerifyWithKey::verify_with_key(token_str.as_ref(), &key);
@@ -77,9 +86,11 @@ pub fn verify(secret: String, token_str: String) -> Decoded {
   let exp = decoded_claims.get("exp").unwrap().parse::<f64>().unwrap();
   let iat = decoded_claims.get("iat").unwrap().parse::<f64>().unwrap();
   let payload = decoded_claims.get("payload").unwrap().to_string();
-  let claims = Claims { exp, iat };
 
-  let decoded = Decoded { claims, payload };
+  let decoded = VerifyResult {
+    claims: Claims { exp, iat },
+    payload,
+  };
 
   return decoded;
 }

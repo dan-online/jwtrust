@@ -7,7 +7,7 @@ const location = Deno.env.get('JWT_TEST')
   ? new URL('../../../native/deno_jwtrust_bg.wasm', import.meta.url)
   : new URL(`https://github.com/dan-online/jwtrust/releases/download/v${version}/deno_jwtrust_bg.wasm`);
 
-const bindings = await instantiate({
+const { Claims, sign, verify } = await instantiate({
   url: location
 });
 
@@ -72,8 +72,7 @@ class JWTR<T = unknown> {
     }
   ): string {
     try {
-      const claims = new bindings.Claims(exp, iat);
-      return bindings.sign(this.secret, JSON.stringify(payload), claims);
+      return sign(this.secret, JSON.stringify(payload), exp, iat);
     } catch (err) {
       throw new JWTRError((err as Error).message, 'sign');
     }
@@ -91,7 +90,7 @@ class JWTR<T = unknown> {
    */
   public verify(token: string): T {
     try {
-      const output = bindings.verify(this.secret, token);
+      const output = verify(this.secret, token);
       const exp = output.get_exp();
       const payload = output.get_payload();
       if (exp && exp < Date.now() / 1000) throw new Error('token expired');
