@@ -8,13 +8,14 @@ A tiny library to sign and verify JWT tokens using **Rust** bindings for pure pe
 JWTRust Benchmark commencing, runs set at 100000 and 16 payload length.
 
 ✔ Benchmarking complete!
-┌──────────────┬──────────────┬───────────────────┬───────────┐
-│   (index)    │ Average (ms) │ Operations (op/s) │ Total (s) │
-├──────────────┼──────────────┼───────────────────┼───────────┤
-│   JWTRust    │   '0.010'    │     '104,020'     │  '0.96'   │
-│   fast-jwt   │   '0.018'    │     '55,056'      │  '1.82'   │
-│ jsonwebtoken │   '0.022'    │     '45,488'      │  '2.20'   │
-└──────────────┴──────────────┴───────────────────┴───────────┘
+┌──────────────────┬──────────────┬───────────────────┬───────────┐
+│     Package      │ Average (ms) │ Operations (op/s) │ Total (s) │
+├──────────────────┼──────────────┼───────────────────┼───────────┤
+│     JWTRust      │   '0.010'    │     '104,020'     │  '0.96'   │
+│  JWTRust (Deno)  │   "0.015"    │     "66,992"      │  "1.49"   │
+│     fast-jwt     │   '0.018'    │     '55,056'      │  '1.82'   │
+│   jsonwebtoken   │   '0.022'    │     '45,488'      │  '2.20'   │
+└──────────────────┴──────────────┴───────────────────┴───────────┘
 ```
 
 > Benchmark run on Ryzen 3600X (6 cores, 12 threads) with 32GB RAM
