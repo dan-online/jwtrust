@@ -7,7 +7,7 @@ on:
 
 jobs:
   node:
-    name: node
+    name: node-build
     runs-on: ubuntu-latest
     needs: [deno_native, node_native]
     defaults:
