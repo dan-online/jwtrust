@@ -32,10 +32,10 @@ jobs:
       - name: Tweak package.json
 
         run: python3 -c "import os; import json; p = json.load(open('package.json')); p['scripts']['install'] = 'node-pre-gyp install'; p['version'] = os.environ['RELEASE_VERSION']; json.dump(p, open('package.json', 'w'), indent=2, ensure_ascii=False);"
-      - name: Publish to npm
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Publish to npm
+      #   run: npm publish --access public
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   deno_native:
     name: deno-build
@@ -47,6 +47,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.release.tag_name }}
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          target: ubuntu-latest
+          override: true
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
