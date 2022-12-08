@@ -1,6 +1,6 @@
 [package]
 name = "jwtrust"
-version = "1.0.1"
+version = "1.0.2"
 license = "MIT"
 edition = "2018"
 exclude = ["index.node"]

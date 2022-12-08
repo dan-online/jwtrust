@@ -1,6 +1,6 @@
 {
   "name": "jwtrust",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tiny library to sign and verify JWT tokens using **Rust** bindings for pure performance.",
   "main": "dist/index.js",
   "scripts": {
