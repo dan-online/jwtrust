@@ -116,7 +116,7 @@ const token = jwtrust.sign({ hello: 'world' }, { exp: convertTime('1y'), iat: Da
 ```js
 const jwtrust = new JWTR('secret');
 
-const token = jwtrust.verify(token);
+const payload = jwtrust.verify(token);
 ```
 
 Supported options and result fields for the `verify` method are listed below.
@@ -138,11 +138,13 @@ This library is written in Typescript and includes type definitions. Here is an 
 ```ts
 import { JWTR, convertTime } from 'jwtrust';
 
-const jwtrust = new JWTR<{ hello: string }>('secret');
+type Payload = { hello: string }
+
+const jwtrust = new JWTR<Payload>('secret');
 
 const token = jwtrust.sign({ hello: 'world' });
 
-const decoded = jwtrust.verify(token);
+const decoded: Payload = jwtrust.verify(token);
 ```
 
 ## Development
