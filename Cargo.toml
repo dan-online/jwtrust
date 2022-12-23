@@ -9,7 +9,7 @@ exclude = ["index.node"]
 crate-type = ["cdylib"]
 
 [dependencies]
-jsonwebtoken = "8.1.1"
+jsonwebtoken = "8.2.0"
 sha2 = "0.10.6"
 hmac = "0.12.1"
 serde = {version = "1.0", features = ["derive"] }
