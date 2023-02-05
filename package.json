@@ -42,8 +42,8 @@
     "@sapphire/eslint-config": "^4.3.8",
     "@sapphire/ts-config": "^3.3.4",
     "@types/jsonwebtoken": "^9.0.1",
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@types/node": "^18.11.19",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
     "cargo-cp-artifact": "^0.1",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
@@ -52,7 +52,7 @@
     "jsonwebtoken": "^9.0.0",
     "prettier": "^2.8.3",
     "tsup": "^6.5.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.10"
