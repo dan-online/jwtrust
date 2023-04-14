@@ -94,5 +94,6 @@ class JWTR<T = unknown> {
   }
 }
 
-export { convertTime, JWTR, JWTOptions };
+export { convertTime, JWTR };
+export type { JWTOptions };
 export default JWTR;
