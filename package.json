@@ -40,7 +40,7 @@
   "devDependencies": {
     "@favware/colorette-spinner": "^1.0.1",
     "@sapphire/eslint-config": "^4.4.1",
-    "@sapphire/ts-config": "^3.3.4",
+    "@sapphire/ts-config": "^4.0.0",
     "@types/jsonwebtoken": "^9.0.1",
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
