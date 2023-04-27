@@ -468,12 +468,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:^9.0.1":
-  version: 9.0.1
-  resolution: "@types/jsonwebtoken@npm:9.0.1"
+"@types/jsonwebtoken@npm:^9.0.2":
+  version: 9.0.2
+  resolution: "@types/jsonwebtoken@npm:9.0.2"
   dependencies:
     "@types/node": "*"
-  checksum: a7f0925e9a42ad3ae970364c63c5986d40da5c83d51d3f4e624eb0f064a380376f9e3fb3f2f837390a9ab80143f5d75fd51866da30e110f6b486a3379e1c768f
+  checksum: 3bb8d40e78d7eb53e427db6e9f0f22e0890cfee80965dcf741d08341814913afb211306de6e9847c6d241cc8e36f8a59090cbfdcc510ab7c81af9d650c5afe0e
   languageName: node
   linkType: hard
 
@@ -1551,14 +1551,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-jwt@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "fast-jwt@npm:2.2.1"
+"fast-jwt@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "fast-jwt@npm:2.2.2"
   dependencies:
     asn1.js: ^5.4.1
     ecdsa-sig-formatter: ^1.0.11
     mnemonist: ^0.39.5
-  checksum: 1eb36235c5d7b9790a9942291f69c38c28eef187297bf2be20ed8edd13a2cb6de59536d2866380939ba2915f67fb78ebfb1f95ba62336c4c0d4e4dc688b9a28e
+  checksum: 57dbedcd313ccbcff06c9b66174ecdc55a81ca49f747bc9c7b4f194cfca3926f6521ee326aaa3f244c4c33625e97f9846317442210d69b1df56bd44b0df7c9f3
   languageName: node
   linkType: hard
 
@@ -2071,14 +2071,14 @@ __metadata:
     "@sapphire/eslint-config": ^4.4.1
     "@sapphire/ts-config": ^4.0.0
     "@swc/core": ^1.3.55
-    "@types/jsonwebtoken": ^9.0.1
+    "@types/jsonwebtoken": ^9.0.2
     "@types/node": ^18.16.1
     "@typescript-eslint/eslint-plugin": ^5.59.1
     cargo-cp-artifact: ^0.1.8
     eslint: ^8.39.0
     eslint-config-prettier: ^8.8.0
     eslint-plugin-prettier: ^4.2.1
-    fast-jwt: ^2.2.1
+    fast-jwt: ^2.2.2
     jsonwebtoken: ^9.0.0
     prettier: ^2.8.8
     tsup: ^6.7.0
