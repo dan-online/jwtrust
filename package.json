@@ -58,5 +58,5 @@
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.10"
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.1"
 }
