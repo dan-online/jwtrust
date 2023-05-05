@@ -46,7 +46,7 @@
     "@types/node": "^18.16.4",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "cargo-cp-artifact": "^0.1.8",
-    "eslint": "^8.39.0",
+    "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "fast-jwt": "^2.2.2",
