@@ -43,7 +43,7 @@
     "@sapphire/ts-config": "^4.0.0",
     "@swc/core": "^1.3.56",
     "@types/jsonwebtoken": "^9.0.2",
-    "@types/node": "^18.16.4",
+    "@types/node": "^18.16.5",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "cargo-cp-artifact": "^0.1.8",
     "eslint": "^8.40.0",
