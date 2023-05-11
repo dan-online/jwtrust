@@ -1576,14 +1576,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-jwt@npm:^2.2.2":
-  version: 2.2.2
-  resolution: "fast-jwt@npm:2.2.2"
+"fast-jwt@npm:^2.2.3":
+  version: 2.2.3
+  resolution: "fast-jwt@npm:2.2.3"
   dependencies:
     asn1.js: ^5.4.1
     ecdsa-sig-formatter: ^1.0.11
     mnemonist: ^0.39.5
-  checksum: 57dbedcd313ccbcff06c9b66174ecdc55a81ca49f747bc9c7b4f194cfca3926f6521ee326aaa3f244c4c33625e97f9846317442210d69b1df56bd44b0df7c9f3
+  checksum: f1ca20524b5fe937712e7631f7338c99378b471173303f0fa85d7b2387a56444853520465006631bf13cab735570bb1c78e8543a157b2d4c1bc0f804f8ea3aa2
   languageName: node
   linkType: hard
 
@@ -2103,7 +2103,7 @@ __metadata:
     eslint: ^8.40.0
     eslint-config-prettier: ^8.8.0
     eslint-plugin-prettier: ^4.2.1
-    fast-jwt: ^2.2.2
+    fast-jwt: ^2.2.3
     jsonwebtoken: ^9.0.0
     prettier: ^2.8.8
     tsup: ^6.7.0
