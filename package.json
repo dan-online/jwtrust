@@ -49,7 +49,7 @@
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "fast-jwt": "^2.2.3",
+    "fast-jwt": "^3.0.0",
     "jsonwebtoken": "^9.0.0",
     "prettier": "^2.8.8",
     "tsup": "^6.7.0",
