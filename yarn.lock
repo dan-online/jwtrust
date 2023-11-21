@@ -298,6 +298,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lukeed/ms@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@lukeed/ms@npm:2.0.1"
+  checksum: c7b46933bf7bad3e024dcbbe2ad6201392b4ed2a05a717c0ef7e96a03fb885d44f08b4b749c392cc51c2736a6a45a08c77f1863ace1c072928fbfd9908a13db3
+  languageName: node
+  linkType: hard
+
 "@mapbox/node-pre-gyp@npm:^1.0.11":
   version: 1.0.11
   resolution: "@mapbox/node-pre-gyp@npm:1.0.11"
@@ -1734,13 +1741,14 @@ __metadata:
   linkType: hard
 
 "fast-jwt@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "fast-jwt@npm:3.1.1"
+  version: 3.3.2
+  resolution: "fast-jwt@npm:3.3.2"
   dependencies:
+    "@lukeed/ms": ^2.0.1
     asn1.js: ^5.4.1
     ecdsa-sig-formatter: ^1.0.11
     mnemonist: ^0.39.5
-  checksum: c401a39105ec2a81abf8565316c625310410a3b13dcc4286b6dd921f45319414f45fdc52df6b8a27460afddd377b038cb41b12ee42cd93d46158b396723ac6eb
+  checksum: eade6c8de56a1350f2aa228f3354e045232aae860620419f68992639bf9c1a9e2daf5f73d4a7fe82e09927f4f6834c5ecd81e7b534f3da3750f91d20e4f3e9f3
   languageName: node
   linkType: hard
 
