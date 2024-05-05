@@ -12,7 +12,7 @@ crate-type = ["cdylib"]
 jsonwebtoken = "8.3.0"
 sha2 = "0.10.8"
 hmac = "0.12.1"
-serde = {version = "1.0", features = ["derive"] }
+serde = {version = "1.0.200", features = ["derive"] }
 
 [dependencies.neon]
 version = "1.0.0"
