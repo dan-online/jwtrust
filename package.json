@@ -47,7 +47,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "cargo-cp-artifact": "^0.1.8",
     "eslint": "^9.0.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.0.0",
     "fast-jwt": "^5.0.0",
     "jsonwebtoken": "^9.0.0",

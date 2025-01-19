@@ -1520,6 +1520,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-config-prettier@npm:^10.0.1":
+  version: 10.0.1
+  resolution: "eslint-config-prettier@npm:10.0.1"
+  peerDependencies:
+    eslint: ">=7.0.0"
+  bin:
+    eslint-config-prettier: build/bin/cli.js
+  checksum: f827d9b0df5e088bb22c938e59bd4ade4df756ae73b13150652dcc64ee3b6b81d06f53baa47a51b4a44e3ece19e3a5357b79d01e5048fd7667af332dcca8473e
+  languageName: node
+  linkType: hard
+
 "eslint-config-prettier@npm:^8.8.0":
   version: 8.8.0
   resolution: "eslint-config-prettier@npm:8.8.0"
@@ -1528,17 +1539,6 @@ __metadata:
   bin:
     eslint-config-prettier: bin/cli.js
   checksum: 1e94c3882c4d5e41e1dcfa2c368dbccbfe3134f6ac7d40101644d3bfbe3eb2f2ffac757f3145910b5eacf20c0e85e02b91293d3126d770cbf3dc390b3564681c
-  languageName: node
-  linkType: hard
-
-"eslint-config-prettier@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "eslint-config-prettier@npm:9.0.0"
-  peerDependencies:
-    eslint: ">=7.0.0"
-  bin:
-    eslint-config-prettier: bin/cli.js
-  checksum: 362e991b6cb343f79362bada2d97c202e5303e6865888918a7445c555fb75e4c078b01278e90be98aa98ae22f8597d8e93d48314bec6824f540f7efcab3ce451
   languageName: node
   linkType: hard
 
@@ -2460,7 +2460,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^8.0.0
     cargo-cp-artifact: ^0.1.8
     eslint: ^9.0.0
-    eslint-config-prettier: ^9.0.0
+    eslint-config-prettier: ^10.0.1
     eslint-plugin-prettier: ^5.0.0
     fast-jwt: ^5.0.0
     jsonwebtoken: ^9.0.0
