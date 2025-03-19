@@ -346,10 +346,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lukeed/ms@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@lukeed/ms@npm:2.0.1"
-  checksum: c7b46933bf7bad3e024dcbbe2ad6201392b4ed2a05a717c0ef7e96a03fb885d44f08b4b749c392cc51c2736a6a45a08c77f1863ace1c072928fbfd9908a13db3
+"@lukeed/ms@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@lukeed/ms@npm:2.0.2"
+  checksum: 6ae47ed3ebc857ffc0283cfe46129947209c770d0974eb86626138b6c194a760d08863ec593ec75a645aec133b3237b37af500739b030293e4d9a81130f4e2ae
   languageName: node
   linkType: hard
 
@@ -1921,14 +1921,14 @@ __metadata:
   linkType: hard
 
 "fast-jwt@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "fast-jwt@npm:5.0.0"
+  version: 5.0.6
+  resolution: "fast-jwt@npm:5.0.6"
   dependencies:
-    "@lukeed/ms": ^2.0.1
+    "@lukeed/ms": ^2.0.2
     asn1.js: ^5.4.1
     ecdsa-sig-formatter: ^1.0.11
-    mnemonist: ^0.39.5
-  checksum: 4e6cae3b751b5a511ceeb5877bf2d32f1dd632cd605526155f6f52dbc08cac5bcc61d2ee57d1c1fbd7767a30564a6612cbba9e27a240e96731f4cc6e28ec888f
+    mnemonist: ^0.40.0
+  checksum: 47c7242a16bf19f396ab3b7b30616083a7022295e59dc834447088c7d7a5717dd14ee71d3e2bd93c99d748accc746faf22512691a327f2ba6dd6a5cfecace2ed
   languageName: node
   linkType: hard
 
@@ -2881,12 +2881,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mnemonist@npm:^0.39.5":
-  version: 0.39.5
-  resolution: "mnemonist@npm:0.39.5"
+"mnemonist@npm:^0.40.0":
+  version: 0.40.3
+  resolution: "mnemonist@npm:0.40.3"
   dependencies:
-    obliterator: ^2.0.1
-  checksum: 6669d687a434226924b2c84ee6eb7ce7d0f83dfc5caad8bcc164c73c0c11fb6d43cbe32636e710f068046f4b40a56c3032532554e93e02640aafc6ca3dd222e6
+    obliterator: ^2.0.4
+  checksum: f2a033f7fc830283dffa9280854379da40a555270dce32b9f8cf1c80ba323d77a9ad3f578573b277f7e265e63d650d7d3a60911cddffe373ae2364e68c43b7a0
   languageName: node
   linkType: hard
 
@@ -3036,10 +3036,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"obliterator@npm:^2.0.1":
-  version: 2.0.4
-  resolution: "obliterator@npm:2.0.4"
-  checksum: f28ad35b6d812089315f375dc3e6e5f9bebf958ebe4b10ccd471c7115cbcf595e74bdac4783ae758e5b1f47e3096427fdb37cfa7bed566b132df92ff317b9a7c
+"obliterator@npm:^2.0.4":
+  version: 2.0.5
+  resolution: "obliterator@npm:2.0.5"
+  checksum: 49575c428d66941326f265b8962bbce05c2a209c180e6ebf49d07e6d6cf2e6ab3f805289ad58aec49e74825344c97e790e5658b55e226a8cb4f57d866db3adf5
   languageName: node
   linkType: hard
 
