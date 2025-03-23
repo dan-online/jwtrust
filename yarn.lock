@@ -1920,15 +1920,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-jwt@npm:^5.0.0":
-  version: 5.0.6
-  resolution: "fast-jwt@npm:5.0.6"
+"fast-jwt@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "fast-jwt@npm:6.0.0"
   dependencies:
     "@lukeed/ms": ^2.0.2
     asn1.js: ^5.4.1
     ecdsa-sig-formatter: ^1.0.11
     mnemonist: ^0.40.0
-  checksum: 47c7242a16bf19f396ab3b7b30616083a7022295e59dc834447088c7d7a5717dd14ee71d3e2bd93c99d748accc746faf22512691a327f2ba6dd6a5cfecace2ed
+  checksum: a09b79d1e46403e9d96d477d38f885fb9dce45ffc7db79f26036c75433592729a92e47c0c64b77926423dbdf9fce537c37eed6dcac3267f021e5d5abfab35372
   languageName: node
   linkType: hard
 
@@ -2579,7 +2579,7 @@ __metadata:
     eslint: ^9.0.0
     eslint-config-prettier: ^10.0.1
     eslint-plugin-prettier: ^5.0.0
-    fast-jwt: ^5.0.0
+    fast-jwt: ^6.0.0
     jsonwebtoken: ^9.0.0
     prettier: ^2.8.8
     tsup: ^8.0.1
