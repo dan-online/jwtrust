@@ -353,9 +353,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mapbox/node-pre-gyp@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@mapbox/node-pre-gyp@npm:2.0.0"
+"@mapbox/node-pre-gyp@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@mapbox/node-pre-gyp@npm:2.0.3"
   dependencies:
     consola: ^3.2.3
     detect-libc: ^2.0.0
@@ -366,7 +366,7 @@ __metadata:
     tar: ^7.4.0
   bin:
     node-pre-gyp: bin/node-pre-gyp
-  checksum: 39aad1251c71cc8ef348a0da6a82000bc4c94b02afe519d6595d779c3002676a05902bd1e438c45cb54b779d04bdbaf422037379a1f72af353daebd54741f4b7
+  checksum: 8b1a9833d4b6cb5cda943fa3e5c2cc61395e2623570092c98d585c3ce3c44088d597d88cbe89cdd99c57ae741927bcbeb58880fbfb03e4161640bed250ab7916
   languageName: node
   linkType: hard
 
@@ -2568,7 +2568,7 @@ __metadata:
   resolution: "jwtrust@workspace:."
   dependencies:
     "@favware/colorette-spinner": ^1.0.1
-    "@mapbox/node-pre-gyp": ^2.0.0
+    "@mapbox/node-pre-gyp": ^2.0.3
     "@sapphire/eslint-config": ^5.0.0
     "@sapphire/ts-config": ^5.0.0
     "@swc/core": ^1.3.62
