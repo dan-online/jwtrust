@@ -2009,14 +2009,15 @@ __metadata:
   linkType: hard
 
 "fast-jwt@npm:^6.0.0":
-  version: 6.2.0
-  resolution: "fast-jwt@npm:6.2.0"
+  version: 6.2.1
+  resolution: "fast-jwt@npm:6.2.1"
   dependencies:
     "@lukeed/ms": ^2.0.2
     asn1.js: ^5.4.1
     ecdsa-sig-formatter: ^1.0.11
     mnemonist: ^0.40.0
-  checksum: 5b5f80cb668b7d313da67f6ee6a5cf142185bb7e00ae613a175f91832898db02cbebecf478670ba3283b7b839827c72ab5604ac899b6b49db2ea073070815550
+    safe-regex2: ^5.1.0
+  checksum: b49b6383aae4740daf5ce597bc6e610d1454695017c961e4fa9b161ecc0c3701d33a66ec82f443609c17b35e065e1a7bbcf18163221f14edebfe1ac8ec76aad9
   languageName: node
   linkType: hard
 
@@ -3412,6 +3413,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ret@npm:~0.5.0":
+  version: 0.5.0
+  resolution: "ret@npm:0.5.0"
+  checksum: 3763aff074a56baa072afcfb5c19b09fb7c05045a27715bf4f28395cd11ab98cc2d0698bf4a3cd3f1c5e650ed167362d354c0e545ab134a6b7ec83df5e9d7d42
+  languageName: node
+  linkType: hard
+
 "retry@npm:^0.12.0":
   version: 0.12.0
   resolution: "retry@npm:0.12.0"
@@ -3520,6 +3528,17 @@ __metadata:
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: b99c4b41fdd67a6aaf280fcd05e9ffb0813654894223afb78a31f14a19ad220bba8aba1cb14eddce1fcfb037155fe6de4e861784eb434f7d11ed58d1e70dd491
+  languageName: node
+  linkType: hard
+
+"safe-regex2@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "safe-regex2@npm:5.1.0"
+  dependencies:
+    ret: ~0.5.0
+  bin:
+    safe-regex2: bin/safe-regex2.js
+  checksum: cfb34164104bca23eacd0164852e21ce8453fe9e5908a79afbc792added38a59cba3116b1feca5c01caece0a56f378b8627ef67bb8dc47f0e15f65273155b37e
   languageName: node
   linkType: hard
 
