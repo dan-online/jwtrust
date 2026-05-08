@@ -2009,15 +2009,15 @@ __metadata:
   linkType: hard
 
 "fast-jwt@npm:^6.0.0":
-  version: 6.2.1
-  resolution: "fast-jwt@npm:6.2.1"
+  version: 6.2.4
+  resolution: "fast-jwt@npm:6.2.4"
   dependencies:
     "@lukeed/ms": ^2.0.2
     asn1.js: ^5.4.1
     ecdsa-sig-formatter: ^1.0.11
     mnemonist: ^0.40.0
     safe-regex2: ^5.1.0
-  checksum: b49b6383aae4740daf5ce597bc6e610d1454695017c961e4fa9b161ecc0c3701d33a66ec82f443609c17b35e065e1a7bbcf18163221f14edebfe1ac8ec76aad9
+  checksum: 81abd6d5b891c7b94dd3724f9302d9c45f2c8c50e399816f7b14444a3a0507ade2f3de8b5ae1ca285c02a4193a0c9ac441b5d84a89605be458b65e108217b391
   languageName: node
   linkType: hard
 
