@@ -4023,11 +4023,11 @@ __metadata:
 
 "typescript@patch:typescript@^6.0.2#~builtin<compat/typescript>":
   version: 6.0.2
-  resolution: "typescript@patch:typescript@npm%3A6.0.2#~builtin<compat/typescript>::version=6.0.2&hash=f3b441"
+  resolution: "typescript@patch:typescript@npm%3A6.0.2#~builtin<compat/typescript>::version=6.0.2&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 71a55653741fb12e81e7002c501ce2e5847e6cb251bc868de981561c07de178efed8f799ffc69cff92e162ceb44b67d25d60e293170db229cc5081afefababe3
+  checksum: 9f29a9339aa66f5e13485c596c8d4d086fb95960f8be8a23ea6ef33afe61f7c465d330a6f77911bb8613f231c2ebf131763a82d277cefa61147b24af2073f0c4
   languageName: node
   linkType: hard
 
